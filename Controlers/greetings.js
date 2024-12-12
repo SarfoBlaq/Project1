@@ -6,8 +6,13 @@ const greetingController = async (req, res) => {
     return res.json(response);
 };
 
-
+const greetController = async (req, res) => {
+    const { name } = req.params;
+    const response = "Hello " + name + "!";
+    return res.json(response);
+};
 
 module.exports = {
-    greetingController
+    greetingController,
+    greetController
 };
